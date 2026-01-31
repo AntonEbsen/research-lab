@@ -1,5 +1,6 @@
 jupyterlite-core
 jupyterlite-pyodide-kernel
+jupyter-server
 pandas
 matplotlib
 numpy

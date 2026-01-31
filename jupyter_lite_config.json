@@ -1,5 +1,5 @@
 {
     "LiteBuildConfig": {
-        "baseUrl": "/research-lab/"
+        "base_url": "/research-lab/"
     }
 }
