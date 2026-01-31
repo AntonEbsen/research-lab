@@ -10,3 +10,4 @@ ipywidgets
 ipyleaflet
 openpyxl
 pyarrow
+requests
