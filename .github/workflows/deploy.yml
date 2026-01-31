@@ -22,18 +22,22 @@ jobs:
           python-version: '3.11'
       - name: Install the dependencies
         run: |
-          python -m pip install -r requirements.txt
+          python -m pip install -r requirements.txt pytest nbval
       - name: Build the JupyterLite site
         run: |
           cp README.md content
           jupyter lite build --contents content --output-dir dist --piplite-wheels requirements.txt
-      - name: Inject PWA Metadata
+      - name: Test notebooks
+        run: |
+          pytest --nbval content/*.ipynb
+      - name: Inject PWA & Theme Metadata
         run: |
           cp manifest.json dist/
           mkdir -p dist/assets
           cp assets/icon-512.png dist/assets/
-          # Inject manifest link before </head>
-          sed -i 's|</head>|<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#d4af37"></head>|' dist/index.html
+          # Inject manifest link and theme-sync script before </head>
+          THEME_SCRIPT="<script>(function(){const p=new URLSearchParams(window.location.search);const t=p.get('theme');if(t==='dark'||t==='light'){const jt=t==='dark'?'JupyterLab Dark':'JupyterLab Light';try{const s=JSON.parse(localStorage.getItem('jupyter-lab-settings')||'{}');if(!s['@jupyterlab/apputils-extension:themes'])s['@jupyterlab/apputils-extension:themes']={};s['@jupyterlab/apputils-extension:themes'].theme=jt;localStorage.setItem('jupyter-lab-settings',JSON.stringify(s));console.log('Research Lab: Active Theme Sync');}catch(e){}}})();</script>"
+          sed -i \"s|</head>|<link rel=\"manifest\" href=\"manifest.json\"><meta name=\"theme-color\" content=\"#d4af37\">$THEME_SCRIPT</head>|\" dist/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
