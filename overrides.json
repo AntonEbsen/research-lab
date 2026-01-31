@@ -2,6 +2,12 @@
     "@jupyterlab/apputils-extension:themes": {
         "theme": "JupyterLab Dark"
     },
+    "@jupyterlab/apputils-extension:splash": {
+        "style": {
+            "background": "#050505",
+            "color": "#d4af37"
+        }
+    },
     "@jupyterlab/docmanager-extension:plugin": {
         "defaultViewers": {
             "markdown": "Markdown Preview"

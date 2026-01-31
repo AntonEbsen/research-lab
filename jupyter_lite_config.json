@@ -7,12 +7,15 @@
                     "pandas",
                     "matplotlib",
                     "numpy",
-                    "scipy"
+                    "scipy",
+                    "ipywidgets",
+                    "ipyleaflet"
                 ]
             }
         },
         "Contents": {
             "allow_none": true
-        }
+        },
+        "storage_name": "Ebsen Research Lab"
     }
 }
