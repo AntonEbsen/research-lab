@@ -8,3 +8,4 @@ scipy>=1.10.0
 jupyterlab-geojson
 ipywidgets
 ipyleaflet
+openpyxl

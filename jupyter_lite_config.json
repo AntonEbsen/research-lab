@@ -9,7 +9,8 @@
                     "numpy",
                     "scipy",
                     "ipywidgets",
-                    "ipyleaflet"
+                    "ipyleaflet",
+                    "openpyxl"
                 ]
             }
         },
