@@ -1,19 +1,9 @@
 {
     "LiteBuildConfig": {
         "base_url": "/",
-        "apps": {
-            "lab": {
-                "pre_install": [
-                    "pandas",
-                    "matplotlib",
-                    "numpy",
-                    "scipy",
-                    "ipywidgets",
-                    "ipyleaflet",
-                    "openpyxl"
-                ]
-            }
-        },
+        "apps": [
+            "lab"
+        ],
         "Contents": {
             "allow_none": true
         },
