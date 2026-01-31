@@ -2,7 +2,14 @@
     "@jupyterlab/apputils-extension:themes": {
         "theme": "JupyterLab Dark"
     },
-    "@jupyterlite/app-extension:tour": {
-        "shouldShowTour": false
+    "@jupyterlab/docmanager-extension:plugin": {
+        "defaultViewers": {
+            "markdown": "Markdown Preview"
+        }
+    },
+    "@jupyterlab/notebook-extension:factory": {
+        "defaultViewers": {
+            "notebook": "Notebook"
+        }
     }
 }

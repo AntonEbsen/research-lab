@@ -1,8 +1,8 @@
-jupyterlite-core
-jupyterlite-pyodide-kernel
+jupyterlite-core==0.7.1
+jupyterlite-pyodide-kernel==0.7.0
 jupyter-server
-pandas
-matplotlib
-numpy
-scipy
+pandas>=2.0.0
+matplotlib>=3.7.0
+numpy>=1.24.0
+scipy>=1.10.0
 jupyterlab-geojson

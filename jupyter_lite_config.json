@@ -1,5 +1,18 @@
 {
     "LiteBuildConfig": {
-        "base_url": "/"
+        "base_url": "/",
+        "apps": {
+            "lab": {
+                "pre_install": [
+                    "pandas",
+                    "matplotlib",
+                    "numpy",
+                    "scipy"
+                ]
+            }
+        },
+        "Contents": {
+            "allow_none": true
+        }
     }
 }
