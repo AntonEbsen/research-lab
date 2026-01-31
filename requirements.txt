@@ -9,4 +9,3 @@ jupyterlab-geojson
 ipywidgets
 ipyleaflet
 openpyxl
-git+https://github.com/alemartinello/dstapi
