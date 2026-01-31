@@ -4,6 +4,11 @@
         "apps": [
             "lab"
         ],
+        "PipliteAddon": {
+            "requirements": [
+                "requirements.txt"
+            ]
+        },
         "Contents": {
             "allow_none": true
         },
