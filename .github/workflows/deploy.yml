@@ -27,6 +27,13 @@ jobs:
         run: |
           cp README.md content
           jupyter lite build --contents content --output-dir dist --piplite-wheels requirements.txt
+      - name: Inject PWA Metadata
+        run: |
+          cp manifest.json dist/
+          mkdir -p dist/assets
+          cp assets/icon-512.png dist/assets/
+          # Inject manifest link before </head>
+          sed -i 's|</head>|<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#d4af37"></head>|' dist/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
