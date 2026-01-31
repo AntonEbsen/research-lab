@@ -16,6 +16,8 @@
         "Contents": {
             "allow_none": true
         },
-        "storage_name": "Ebsen Research Lab"
+        "storage_name": "Ebsen Research Lab",
+        "site_logo": "assets/logo.png",
+        "favicon": "assets/logo.png"
     }
 }
